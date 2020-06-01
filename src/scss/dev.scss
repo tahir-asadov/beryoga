@@ -1,0 +1,25 @@
+.break-point-indicator {
+  display: block!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 20px;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+.window-width {
+  display: block!important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 20px;
+  background: #000;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}

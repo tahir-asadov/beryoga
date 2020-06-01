@@ -1,0 +1,83 @@
+
+@import 'variables.scss';
+
+/* ==========================================================================
+[Base grid]
+========================================================================== */
+.base-grid {
+  display: grid;
+  grid-template-rows: 115px auto 115px;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+/* ==========================================================================
+[Navigation]
+========================================================================== */
+.navigation-section {
+  .row-top {
+    .container {
+      grid-template-columns: 1fr;
+      .cell-navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .cell-logo {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+[Content]
+========================================================================== */
+.content-section {
+  .row {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* ==========================================================================
+[Footer]
+========================================================================== */
+.footer-section {
+  .row {
+    .container {
+      grid-template-columns: 1fr;
+      .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .social-links {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-align: right;
+          li {
+            display: inline;
+            a {
+              display: inline-block;
+              padding: 5px;
+              margin-right: 5px;
+              font-size: 20px;
+              color: $light_black;
+              &:hover {
+                color: $primary_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.break-point-indicator, .window-width {
+  display: none;
+}
+

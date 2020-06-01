@@ -1,0 +1,301 @@
+@import 'variables.scss';
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $primary_font_family;
+  font-size: 18px;
+  line-height: 25px;
+  background: $body_bg_color;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $secondary_font_family;
+}
+h1 {
+  font-size: 65px;
+  line-height: 65px;
+}
+h2 {
+  font-size: 55px;
+  line-height: 55px;
+}
+h3 {
+  font-size: 45px;
+  line-height: 45px;
+}
+h4 {
+  font-size: 35px;
+  line-height: 35px;
+}
+h5 {
+  font-size: 25px;
+}
+h6 {
+  font-size: 15px;
+}
+a {
+  color: $primary_color;
+}
+img {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+[General classes]
+========================================================================== */
+.section {
+  position: relative;
+  width: 100%;
+}
+.row {
+  position: relative;
+  margin-bottom: $row_margin;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.base-grid {
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-gap: $grid_gap;
+}
+
+.flex {
+  display: flex;
+}
+.flex.columns-2 {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > * {
+    flex-basis: 100%;
+  }
+}
+.flex.columns-4 {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > * {
+    flex-basis: 100%;
+  }
+}
+
+// Alignment
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+// Floating
+.cb {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.fn {
+  float: none;
+}
+
+// Margins
+@for $i from 1 through 3 {
+  .m-#{$i * 5} {
+    margin: #{$i * 5}px;
+  }
+  .mt-#{$i * 5} {
+    margin-top: #{$i * 5}px;
+  }
+  .mr-#{$i * 5} {
+    margin-right: #{$i * 5}px;
+  }
+  .mb-#{$i * 5} {
+    margin-bottom: #{$i * 5}px;
+  }
+  .ml-#{$i * 5} {
+    margin-left: #{$i * 5}px;
+  }
+}
+// Paddings
+@for $i from 1 through 3 {
+  .p-#{$i * 5} {
+    padding: #{$i * 5}px;
+  }
+  .pt-#{$i * 5} {
+    padding-top: #{$i * 5}px;
+  }
+  .pr-#{$i * 5} {
+    padding-right: #{$i * 5}px;
+  }
+  .pb-#{$i * 5} {
+    padding-bottom: #{$i * 5}px;
+  }
+  .pl-#{$i * 5} {
+    padding-left: #{$i * 5}px;
+  }
+}
+
+
+.menu-container {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline;
+    }
+  }
+}
+
+/* ==========================================================================
+[Form elements]
+========================================================================== */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="text"],
+textarea {
+  padding: 10px;
+  margin: 5px 5px 5px 0;
+  border: none;
+  border-radius: 3px;
+  border: #bcd0e5 solid 1px;
+  font-size: 16px;
+  color: #bcd0e5;
+}
+[type="submit"], [type="button"], button, .button {
+  display: inline-block;
+  padding: 15px 40px;
+  margin: 5px 5px 5px 0;
+  background-color: $primary_color;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-size:13px;
+  cursor: pointer;
+  font-weight: bold;
+  &.secondary {
+    color: white;
+    background-color: $secondary_color;
+  }
+  &.circle {
+    padding: 15px 15px;
+  }
+}
+
+
+.dropdown-menu {
+  position: relative;
+  z-index: 1;
+  ul {
+    list-style: none;
+    padding: 0;
+    transition: all 300ms;
+    transform-origin: top left;
+  }
+  a {
+    display: inline-block;
+    padding: 15px;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      background: $primary_color;
+      color: $white;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  & > ul {
+    & > li {
+      display: inline;
+      position: relative;
+      & > a {
+        width: 130px;
+      }
+      & > ul {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 130px;
+        & > li {
+          position: relative;
+          & a {
+            width: 100%;
+            text-align: center;
+          }
+          & ul {
+            position: absolute;
+            top: 0;left: 130px;
+            width: 130px;
+            li {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+  & li ul {
+    box-shadow: 0 4px 9px -8px black;
+    background: white;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: scale(0, 0);
+  }
+  li:hover {
+    & > ul {
+      display: block;
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+[Browser upgrade]
+========================================================================== */
+.browserupgrade {
+  background: yellow;
+  padding: 10px;
+}
+
+/* ==========================================================================
+[Selection colors]
+========================================================================== */
+::-moz-selection {
+  color: white;
+  background: $secondary_color;
+}
+
+::selection {
+  color: white;
+  background: $secondary_color;
+}
