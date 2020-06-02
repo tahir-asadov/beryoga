@@ -5,9 +5,9 @@
 [Base grid]
 ========================================================================== */
 .base-grid {
-  display: grid;
-  grid-template-rows: 115px auto 115px;
-  grid-template-rows: 1fr;
+  // display: grid;
+  // grid-template-rows: 115px auto 115px;
+  // grid-template-rows: 1fr;
   height: 100%;
 }
 
@@ -15,28 +15,53 @@
 [Navigation]
 ========================================================================== */
 .navigation-section {
-  .row-top {
+  .row {
     .container {
-      grid-template-columns: 1fr;
-      .cell-navigation {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      .cell-logo {
-        text-align: center;
-      }
+      grid-template-columns: 100px auto 100px;
     }
   }
 }
 
 /* ==========================================================================
-[Content]
+[Header]
 ========================================================================== */
-.content-section {
+.header-section {
   .row {
     .container {
-      grid-template-columns: 1fr;
+
+    }
+  }
+}
+
+/* ==========================================================================
+[Why Choose]
+========================================================================== */
+.whychoose-section {
+  .row {
+    .container {
+
+    }
+  }
+}
+
+/* ==========================================================================
+[What's on]
+========================================================================== */
+.whatson-section {
+  .row {
+    .container {
+
+    }
+  }
+}
+
+/* ==========================================================================
+[Pricing]
+========================================================================== */
+.pricing-section {
+  .row {
+    .container {
+
     }
   }
 }
@@ -47,36 +72,20 @@
 .footer-section {
   .row {
     .container {
-      grid-template-columns: 1fr;
-      .cell {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .social-links {
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          text-align: right;
-          li {
-            display: inline;
-            a {
-              display: inline-block;
-              padding: 5px;
-              margin-right: 5px;
-              font-size: 20px;
-              color: $light_black;
-              &:hover {
-                color: $primary_color;
-              }
-            }
-          }
-        }
-      }
+
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
 .break-point-indicator, .window-width {
   display: none;
 }

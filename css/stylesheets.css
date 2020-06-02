@@ -8819,6 +8819,15 @@ img {
   display: grid;
   grid-gap: 10px; }
 
+.grid-2 {
+  grid-template-columns: 1fr; }
+
+.grid-3 {
+  grid-template-columns: 1fr; }
+
+.grid-4 {
+  grid-template-columns: 1fr; }
+
 .flex {
   display: flex; }
 
@@ -9068,54 +9077,29 @@ textarea {
 [Base grid]
 ========================================================================== */
 .base-grid {
-  display: grid;
-  grid-template-rows: 115px auto 115px;
-  grid-template-rows: 1fr;
   height: 100%; }
 
 /* ==========================================================================
 [Navigation]
 ========================================================================== */
-.navigation-section .row-top .container {
-  grid-template-columns: 1fr; }
-  .navigation-section .row-top .container .cell-navigation {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; }
-  .navigation-section .row-top .container .cell-logo {
-    text-align: center; }
+.navigation-section .row .container {
+  grid-template-columns: 100px auto 100px; }
 
 /* ==========================================================================
-[Content]
+[Header]
 ========================================================================== */
-.content-section .row .container {
-  grid-template-columns: 1fr; }
-
+/* ==========================================================================
+[Why Choose]
+========================================================================== */
+/* ==========================================================================
+[What's on]
+========================================================================== */
+/* ==========================================================================
+[Pricing]
+========================================================================== */
 /* ==========================================================================
 [Footer]
 ========================================================================== */
-.footer-section .row .container {
-  grid-template-columns: 1fr; }
-  .footer-section .row .container .cell {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .footer-section .row .container .social-links ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: right; }
-    .footer-section .row .container .social-links ul li {
-      display: inline; }
-      .footer-section .row .container .social-links ul li a {
-        display: inline-block;
-        padding: 5px;
-        margin-right: 5px;
-        font-size: 20px;
-        color: #333333; }
-        .footer-section .row .container .social-links ul li a:hover {
-          color: #ff5959; }
-
 .break-point-indicator, .window-width {
   display: none; }
 
@@ -9147,6 +9131,10 @@ textarea {
     background: green; }
     .break-point-indicator::after {
       content: "min:768px"; }
+  .grid-2 {
+    grid-template-columns: 1fr 1fr; }
+  .grid-4 {
+    grid-template-columns: 1fr 1fr; }
   .flex.columns-4 > * {
     flex: 1 0 24%;
     margin: 0.25%; } }
@@ -9155,16 +9143,8 @@ textarea {
 @media only screen and (min-width: 992px) {
   .base-grid {
     grid-template-rows: 115px auto 115px; }
-  .navigation-section .row-top .container {
-    grid-template-columns: 200px auto; }
-  .content-section .row .container {
-    grid-template-columns: 300px auto; }
-  .footer-section .row .container {
-    grid-template-columns: 1fr 1fr; }
-    .footer-section .row .container .cell {
-      justify-content: left; }
-      .footer-section .row .container .cell.footer-right {
-        justify-content: flex-end; }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr; }
   .break-point-indicator {
     background: red; }
     .break-point-indicator::after {
@@ -9176,6 +9156,8 @@ textarea {
     background: blueviolet; }
     .break-point-indicator::after {
       content: "min:1200px"; }
+  .grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
   .container {
     width: 1140px; } }
 
