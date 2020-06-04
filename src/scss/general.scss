@@ -9,34 +9,38 @@ body {
   height: 100%;
   margin: 0;
   font-family: $primary_font_family;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 25px;
   background: $body_bg_color;
+  color: $dark_black;
+  letter-spacing: 1px;
+  word-spacing: 4px;
 }
 h1, h2, h3, h4, h5, h6 {
   // font-family: $primary_font_family;
+  color: $light_black;
 }
 h1 {
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 50px;
+  line-height: 60px;
 }
 h2 {
-  font-size: 55px;
+  font-size: 45px;
   line-height: 55px;
 }
 h3 {
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 40px;
+  line-height: 50px;
 }
 h4 {
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 30px;
+  line-height: 40px;
 }
 h5 {
-  font-size: 25px;
+  font-size: 35px;
 }
 h6 {
-  font-size: 15px;
+  font-size: 25px;
 }
 a {
   color: $primary_color;
@@ -44,7 +48,11 @@ a {
 img {
   max-width: 100%;
 }
-
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #585858;
+}
 /* ==========================================================================
 [General classes]
 ========================================================================== */
@@ -197,22 +205,28 @@ textarea {
 }
 [type="submit"], [type="button"], button, .button {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 30px 80px;
   margin: 5px 5px 5px 0;
   background-color: $primary_color;
   color: white;
   border-radius: 50px;
   border: none;
   text-decoration: none;
-  font-size:13px;
   cursor: pointer;
-  font-weight: bold;
-  &.secondary {
-    color: white;
-    background-color: $secondary_color;
+  line-height: 0;
+  box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.45),  -4px 7px 9px rgba(226,87,90,.45);
+  // outline-width: 50%;
+    outline-offset: -15px;
+  &.small {
+    padding: 20px 46px;
+    box-shadow: 0 0 32px 5px rgba(226,87,90,.45);
+    outline-offset: -10px;
   }
-  &.circle {
-    padding: 15px 15px;
+  &.outline {
+    border: $primary_color solid 1px;
+    background: none;
+    color: $primary_color;
+    box-shadow: none;
   }
 }
 
@@ -304,10 +318,10 @@ textarea {
 ========================================================================== */
 ::-moz-selection {
   color: white;
-  background: $secondary_color;
+  background: $primary_color;
 }
 
 ::selection {
   color: white;
-  background: $secondary_color;
+  background: $primary_color;
 }

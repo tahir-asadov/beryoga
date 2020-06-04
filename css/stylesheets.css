@@ -8761,37 +8761,48 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Nobile", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 25px;
-  background: #fdfdfd; }
+  background: #fdfdfd;
+  color: #000000;
+  letter-spacing: 1px;
+  word-spacing: 4px; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3b3838; }
 
 h1 {
-  font-size: 65px;
-  line-height: 65px; }
+  font-size: 50px;
+  line-height: 60px; }
 
 h2 {
-  font-size: 55px;
+  font-size: 45px;
   line-height: 55px; }
 
 h3 {
-  font-size: 45px;
-  line-height: 45px; }
+  font-size: 40px;
+  line-height: 50px; }
 
 h4 {
-  font-size: 35px;
-  line-height: 35px; }
+  font-size: 30px;
+  line-height: 40px; }
 
 h5 {
-  font-size: 25px; }
+  font-size: 35px; }
 
 h6 {
-  font-size: 15px; }
+  font-size: 25px; }
 
 a {
   color: #ff5959; }
 
 img {
   max-width: 100%; }
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #585858; }
 
 /* ==========================================================================
 [General classes]
@@ -8977,21 +8988,26 @@ textarea {
 
 [type="submit"], [type="button"], button, .button {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 30px 80px;
   margin: 5px 5px 5px 0;
   background-color: #ff5959;
   color: white;
   border-radius: 50px;
   border: none;
   text-decoration: none;
-  font-size: 13px;
   cursor: pointer;
-  font-weight: bold; }
-  [type="submit"].secondary, [type="button"].secondary, button.secondary, .button.secondary {
-    color: white;
-    background-color: #085f63; }
-  [type="submit"].circle, [type="button"].circle, button.circle, .button.circle {
-    padding: 15px 15px; }
+  line-height: 0;
+  box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.45), -4px 7px 9px rgba(226, 87, 90, 0.45);
+  outline-offset: -15px; }
+  [type="submit"].small, [type="button"].small, button.small, .button.small {
+    padding: 20px 46px;
+    box-shadow: 0 0 32px 5px rgba(226, 87, 90, 0.45);
+    outline-offset: -10px; }
+  [type="submit"].outline, [type="button"].outline, button.outline, .button.outline {
+    border: #ff5959 solid 1px;
+    background: none;
+    color: #ff5959;
+    box-shadow: none; }
 
 .dropdown-menu {
   position: relative;
@@ -9060,11 +9076,11 @@ textarea {
 ========================================================================== */
 ::-moz-selection {
   color: white;
-  background: #085f63; }
+  background: #ff5959; }
 
 ::selection {
   color: white;
-  background: #085f63; }
+  background: #ff5959; }
 
 /* Font families */
 /* Gaps and margins */
