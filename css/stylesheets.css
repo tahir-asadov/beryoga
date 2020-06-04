@@ -8760,13 +8760,10 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: "Lora", serif;
+  font-family: "Nobile", sans-serif;
   font-size: 18px;
   line-height: 25px;
   background: #fdfdfd; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif; }
 
 h1 {
   font-size: 65px;
