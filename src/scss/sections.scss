@@ -15,9 +15,46 @@
 [Navigation]
 ========================================================================== */
 .navigation-section {
+  margin-top: 50px;
   .row {
     .container {
-      grid-template-columns: 100px auto 100px;
+      grid-template-columns: 170px auto 170px;
+      .cell {
+        display: flex;
+        align-items: center;
+      } 
+      .logo {
+        font-size: 32px;
+        font-weight: bold;
+        color: $primary_color;
+        text-decoration: none;
+      }
+      .menu-cell {
+        justify-content: flex-end;
+        .main-menu {
+          .menu-container {
+            text-align: right;
+            li {
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: #6f8ba7;
+                padding: 10px 15px;
+                margin: 0 15px;
+              }
+              &.active {
+                a {
+                  color: $primary_color;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+      .button-cell {
+        justify-content: flex-end;
+      }
     }
   }
 }
@@ -25,10 +62,31 @@
 /* ==========================================================================
 [Header]
 ========================================================================== */
+.header-bg {
+  background-image: url( ../img/header-bg.svg );
+  position: absolute;
+  top: 0;
+  height: 1400px;
+  width: 100%;
+  background-position: bottom center;
+  // z-index: 1;
+}
+.header-left {
+  position: absolute;
+  left: -80px;
+  top: 400px;
+  // z-index: 2;
+}
+.header-right {
+  position: absolute;
+  right: 0;
+  top: 200px;
+  // z-index: 2;
+}
 .header-section {
+  margin-top: 150px;
   .row {
     .container {
-
     }
   }
 }
