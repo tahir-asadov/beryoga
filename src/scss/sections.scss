@@ -71,17 +71,22 @@
   background-position: bottom center;
   // z-index: 1;
 }
-.header-left {
+.header-left-right {
+  height: 1400px;
+  width: 100%;
   position: absolute;
-  left: -80px;
-  top: 400px;
-  // z-index: 2;
-}
-.header-right {
-  position: absolute;
-  right: 0;
-  top: 200px;
-  // z-index: 2;
+  overflow: hidden;
+  .header-left {
+    position: absolute;
+    left: -80px;
+    top: 400px;
+  }
+  .header-right {
+    position: absolute;
+    right: 0;
+    top: 200px;
+  }
+  z-index: 2;
 }
 .header-section {
   margin-top: 150px;
