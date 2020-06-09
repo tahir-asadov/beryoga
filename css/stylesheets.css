@@ -8784,14 +8784,14 @@ h3 {
   line-height: 50px; }
 
 h4 {
-  font-size: 30px;
+  font-size: 23px;
   line-height: 40px; }
 
 h5 {
-  font-size: 35px; }
+  font-size: 20px; }
 
 h6 {
-  font-size: 25px; }
+  font-size: 15px; }
 
 a {
   color: #ff5959; }
@@ -9200,11 +9200,29 @@ textarea {
     top: 200px; }
 
 .header-section {
+  min-height: 1000px;
   margin-top: 150px; }
 
 /* ==========================================================================
 [Why Choose]
 ========================================================================== */
+.whychoose-section {
+  z-index: 2;
+  margin: 100px 0; }
+  .whychoose-section .row-top {
+    margin: 100px 0; }
+  .whychoose-section .row-middle .container .cell {
+    padding: 0 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+    .whychoose-section .row-middle .container .cell img {
+      align-self: center; }
+    .whychoose-section .row-middle .container .cell div {
+      height: 250px; }
+    .whychoose-section .row-middle .container .cell h4 {
+      margin: 20px auto; }
+
 /* ==========================================================================
 [What's on]
 ========================================================================== */
@@ -9273,7 +9291,7 @@ textarea {
   .grid-4 {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
   .container {
-    width: 1040px; } }
+    width: 1140px; } }
 
 .break-point-indicator {
   display: block !important;

@@ -89,6 +89,7 @@
   z-index: 2;
 }
 .header-section {
+  min-height: 1000px;
   margin-top: 150px;
   .row {
     .container {
@@ -100,9 +101,28 @@
 [Why Choose]
 ========================================================================== */
 .whychoose-section {
-  .row {
+  z-index: 2;
+  margin: 100px 0;
+  .row-top {
+    margin: 100px 0;
+  }
+  .row-middle {
     .container {
-
+      .cell {
+        padding: 0 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        img {
+          align-self: center;
+        }
+        div {
+          height: 250px;
+        }
+        h4 {
+          margin: 20px auto;
+        }
+      }
     }
   }
 }
