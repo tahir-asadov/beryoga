@@ -9226,6 +9226,71 @@ textarea {
 /* ==========================================================================
 [What's on]
 ========================================================================== */
+.whatson-section .row {
+  margin-bottom: 250px; }
+
+.whatson-section .row-top .container h4 {
+  margin-bottom: 0; }
+  .whatson-section .row-top .container h4 i {
+    color: #ff5959;
+    font-size: 30px; }
+
+.whatson-section .row-top .container p {
+  margin-top: 0;
+  padding-left: 45px;
+  line-height: 40px; }
+
+.whatson-section .row-top .row-left-right {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; }
+
+.whatson-section .row-top .row-left {
+  margin-top: 300px; }
+
+.whatson-section .row-top .row-right {
+  margin-right: -70px; }
+
+.whatson-section .row-middle .container p {
+  margin: 70px;
+  line-height: 40px; }
+
+.whatson-section .row-middle .container a {
+  margin-left: 70px; }
+
+.whatson-section .row-bottom .container p {
+  margin-left: 70px;
+  line-height: 40px; }
+
+.whatson-section .row-bottom .container h2 {
+  margin-left: 30px; }
+
+.whatson-section .row-bottom .container a {
+  margin-left: 70px; }
+
+.whatson-section .row-bottom .row-left-right {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; }
+
+.whatson-section .row-bottom .row-left {
+  margin-top: -200px; }
+
+.whatson-section .row-bottom .row-right {
+  margin-top: 0; }
+
+.whatson-section a {
+  color: #0096D8;
+  font-style: italic;
+  text-decoration: none; }
+
 /* ==========================================================================
 [Pricing]
 ========================================================================== */
@@ -9267,6 +9332,8 @@ textarea {
     grid-template-columns: 1fr 1fr; }
   .grid-4 {
     grid-template-columns: 1fr 1fr; }
+  .whatson-section .row-bottom .container {
+    grid-template-columns: 3fr 4fr; }
   .flex.columns-4 > * {
     flex: 1 0 24%;
     margin: 0.25%; } }

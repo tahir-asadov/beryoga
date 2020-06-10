@@ -132,9 +132,82 @@
 ========================================================================== */
 .whatson-section {
   .row {
+    margin-bottom: 250px;
+  }
+  .row-top {
     .container {
-
+      h4 {
+        margin-bottom: 0;
+        i {
+          color: $primary_color;
+          font-size: 30px;
+        }
+      }
+      p {
+        margin-top: 0;
+        padding-left: 45px;
+        line-height: 40px;
+      }
     }
+    .row-left-right {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .row-left {
+      margin-top: 300px;
+    }
+    .row-right {
+      margin-right: -70px;  
+    }
+  }
+  .row-middle {
+    .container {
+      p {
+        margin: 70px;
+        line-height: 40px;
+      }
+      a {
+        margin-left: 70px;
+      }
+    }
+  }
+  .row-bottom {
+    .container {
+      p {
+        margin-left: 70px;
+        line-height: 40px;
+      }
+      h2 {
+        margin-left: 30px;
+      }
+      a {
+        margin-left: 70px;
+      }
+    }
+    .row-left-right {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .row-left {
+      margin-top: -200px;
+    }
+    .row-right {
+      margin-top: 0;
+    }
+  }
+  a {
+    color: $secondary_color;
+    font-style: italic;
+    text-decoration: none;
   }
 }
 
