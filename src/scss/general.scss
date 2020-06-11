@@ -205,7 +205,8 @@ textarea {
 }
 [type="submit"], [type="button"], button, .button {
   display: inline-block;
-  padding: 30px 80px;
+  padding: 15px 0;
+  text-align: center;
   margin: 5px 5px 5px 0;
   background-color: $primary_color;
   color: white;
@@ -213,11 +214,12 @@ textarea {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  line-height: 0;
   box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.45),  -4px 7px 9px rgba(226,87,90,.45);
-  // outline-width: 50%;
-    outline-offset: -15px;
+  outline-offset: -15px;
+  width: 220px;
   &.small {
+    width: initial;
+    line-height: 0;
     padding: 20px 46px;
     box-shadow: 0 0 32px 5px rgba(226,87,90,.45);
     outline-offset: -10px;
@@ -227,6 +229,10 @@ textarea {
     background: none;
     color: $primary_color;
     box-shadow: none;
+  }
+  &.gradient-blue {
+    background: rgb(0,150,216);
+    background: linear-gradient(31deg, rgba(0,150,216,1) 26%, rgba(116,192,226,1) 83%); 
   }
 }
 

@@ -8988,7 +8988,8 @@ textarea {
 
 [type="submit"], [type="button"], button, .button {
   display: inline-block;
-  padding: 30px 80px;
+  padding: 15px 0;
+  text-align: center;
   margin: 5px 5px 5px 0;
   background-color: #ff5959;
   color: white;
@@ -8996,10 +8997,12 @@ textarea {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  line-height: 0;
   box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.45), -4px 7px 9px rgba(226, 87, 90, 0.45);
-  outline-offset: -15px; }
+  outline-offset: -15px;
+  width: 220px; }
   [type="submit"].small, [type="button"].small, button.small, .button.small {
+    width: initial;
+    line-height: 0;
     padding: 20px 46px;
     box-shadow: 0 0 32px 5px rgba(226, 87, 90, 0.45);
     outline-offset: -10px; }
@@ -9008,6 +9011,9 @@ textarea {
     background: none;
     color: #ff5959;
     box-shadow: none; }
+  [type="submit"].gradient-blue, [type="button"].gradient-blue, button.gradient-blue, .button.gradient-blue {
+    background: #0096d8;
+    background: linear-gradient(31deg, #0096d8 26%, #74c0e2 83%); }
 
 .dropdown-menu {
   position: relative;
@@ -9294,6 +9300,95 @@ textarea {
 /* ==========================================================================
 [Pricing]
 ========================================================================== */
+.pricing-section .row .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .pricing-section .row .container .cell {
+    padding: 45px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 40px -10px rgba(255, 0, 0, 0.3); }
+    .pricing-section .row .container .cell ul {
+      margin: 0;
+      padding: 0; }
+      .pricing-section .row .container .cell ul li {
+        list-style: none;
+        color: #6C6A6A;
+        line-height: 55px; }
+        .pricing-section .row .container .cell ul li i {
+          font-size: 35px;
+          color: #0096D8;
+          position: relative;
+          top: 5px;
+          margin-right: 10px; }
+    .pricing-section .row .container .cell div.pricing-info {
+      position: relative;
+      text-align: center;
+      margin: 80px 0 0 0;
+      height: 100px;
+      line-height: 40px; }
+      .pricing-section .row .container .cell div.pricing-info > * {
+        width: 100%;
+        color: #6C6A6A; }
+      .pricing-section .row .container .cell div.pricing-info span {
+        font-size: 140px; }
+      .pricing-section .row .container .cell div.pricing-info sup {
+        font-size: 50px;
+        width: 10px;
+        display: inline-block;
+        position: relative;
+        top: -70px;
+        left: -20px; }
+      .pricing-section .row .container .cell div.pricing-info sub {
+        font-size: 30px;
+        width: 10px;
+        display: inline-block;
+        position: relative;
+        bottom: -10px;
+        left: -10px; }
+    .pricing-section .row .container .cell .bill-button {
+      text-align: center; }
+      .pricing-section .row .container .cell .bill-button em {
+        font-style: normal;
+        list-style: none;
+        color: #6C6A6A;
+        line-height: 55px; }
+  .pricing-section .row .container .cell:nth-child(1) {
+    background: white;
+    height: 560px; }
+  .pricing-section .row .container .cell:nth-child(2) {
+    z-index: 1;
+    height: 700px;
+    padding-top: 120px;
+    position: relative; }
+    .pricing-section .row .container .cell:nth-child(2) h3 {
+      text-align: center;
+      background: #ff5959;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      width: 100%;
+      height: 80px;
+      color: white;
+      line-height: 90px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      text-transform: uppercase;
+      font-size: 25px; }
+    .pricing-section .row .container .cell:nth-child(2) ul li i {
+      color: #ff5959; }
+  .pricing-section .row .container .cell:nth-child(3) {
+    background: white;
+    height: 600px; }
+    .pricing-section .row .container .cell:nth-child(3) h3 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 30px;
+      line-height: 50px;
+      color: #6C6A6A; }
+
 /* ==========================================================================
 [Footer]
 ========================================================================== */
