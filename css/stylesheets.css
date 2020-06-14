@@ -9154,16 +9154,18 @@ textarea {
 .navigation-section {
   margin-top: 50px; }
   .navigation-section .row .container {
-    grid-template-columns: 170px auto 170px; }
+    grid-template-columns: auto; }
     .navigation-section .row .container .cell {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      justify-content: center; }
     .navigation-section .row .container .logo {
       font-size: 32px;
       font-weight: bold;
       color: #ff5959;
       text-decoration: none; }
     .navigation-section .row .container .menu-cell {
+      display: none;
       justify-content: flex-end; }
       .navigation-section .row .container .menu-cell .main-menu .menu-container {
         text-align: right; }
@@ -9177,6 +9179,7 @@ textarea {
           color: #ff5959;
           font-weight: bold; }
     .navigation-section .row .container .button-cell {
+      display: none;
       justify-content: flex-end; }
 
 /* ==========================================================================
@@ -9191,6 +9194,7 @@ textarea {
   background-position: bottom center; }
 
 .header-left-right {
+  display: none;
   height: 1400px;
   width: 100%;
   position: absolute;
@@ -9207,7 +9211,13 @@ textarea {
 
 .header-section {
   min-height: 1000px;
-  margin-top: 150px; }
+  margin-top: 50px; }
+  .header-section .row .container .header-info {
+    text-align: center;
+    order: 2; }
+  .header-section .row .container .header-image {
+    text-align: center;
+    order: 1; }
 
 /* ==========================================================================
 [Why Choose]
@@ -9243,15 +9253,14 @@ textarea {
 
 .whatson-section .row-top .container p {
   margin-top: 0;
-  padding-left: 45px;
   line-height: 40px; }
 
 .whatson-section .row-top .row-left-right {
+  display: none;
   position: absolute;
   top: 0;
   width: 100%;
   overflow: hidden;
-  display: flex;
   justify-content: space-between;
   pointer-events: none; }
 
@@ -9262,27 +9271,16 @@ textarea {
   margin-right: -70px; }
 
 .whatson-section .row-middle .container p {
-  margin: 70px;
   line-height: 40px; }
-
-.whatson-section .row-middle .container a {
-  margin-left: 70px; }
 
 .whatson-section .row-bottom .container p {
-  margin-left: 70px;
   line-height: 40px; }
 
-.whatson-section .row-bottom .container h2 {
-  margin-left: 30px; }
-
-.whatson-section .row-bottom .container a {
-  margin-left: 70px; }
-
 .whatson-section .row-bottom .row-left-right {
+  display: none;
   position: absolute;
   top: 0;
   width: 100%;
-  display: flex;
   justify-content: space-between;
   pointer-events: none; }
 
@@ -9304,24 +9302,27 @@ textarea {
   padding-top: 100px;
   background-image: url(/img/footer-pricing-bg.png);
   background-position: bottom center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat; }
   .pricing-section .pricing-shapes-bg {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%; }
+    .pricing-section .pricing-shapes-bg img {
+      width: 100%; }
   .pricing-section .row-pricing {
     margin-top: -90px; }
     .pricing-section .row-pricing .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
+      display: block; }
       .pricing-section .row-pricing .container .cell {
         padding: 45px;
         border-radius: 20px;
         background: white;
-        box-shadow: 0 0 40px -10px rgba(255, 0, 0, 0.3); }
+        box-shadow: 0 0 40px -10px rgba(255, 0, 0, 0.3);
+        width: 300px;
+        margin: auto;
+        margin: 50px auto; }
         .pricing-section .row-pricing .container .cell ul {
           margin: 0;
           padding: 0; }
@@ -9369,12 +9370,14 @@ textarea {
             line-height: 55px; }
       .pricing-section .row-pricing .container .cell:nth-child(1) {
         background: white;
-        height: 560px; }
+        height: 560px;
+        height: 600px; }
       .pricing-section .row-pricing .container .cell:nth-child(2) {
         z-index: 1;
-        height: 700px;
         padding-top: 120px;
-        position: relative; }
+        position: relative;
+        height: 700px;
+        height: 730px; }
         .pricing-section .row-pricing .container .cell:nth-child(2) h3 {
           text-align: center;
           background: #ff5959;
@@ -9394,7 +9397,8 @@ textarea {
           color: #ff5959; }
       .pricing-section .row-pricing .container .cell:nth-child(3) {
         background: white;
-        height: 600px; }
+        height: 600px;
+        height: 630px; }
         .pricing-section .row-pricing .container .cell:nth-child(3) h3 {
           text-align: center;
           margin: 20px 0;
@@ -9409,7 +9413,8 @@ textarea {
       background: rgba(255, 255, 255, 0.5);
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
-      padding-bottom: 30px; }
+      padding-bottom: 30px;
+      text-align: center; }
       .pricing-section .row-footer-top .container h4 {
         font-size: 16px;
         color: #585858; }
@@ -9425,11 +9430,9 @@ textarea {
             color: #585858;
             text-decoration: none;
             line-height: 40px; }
-      .pricing-section .row-footer-top .container .copyright {
-        grid-column: 1 / 5; }
-        .pricing-section .row-footer-top .container .copyright p {
-          text-align: center;
-          padding: 30px 0 0 0; }
+      .pricing-section .row-footer-top .container .copyright p {
+        text-align: center;
+        padding: 30px 0 0 0; }
 
 .break-point-indicator, .window-width {
   display: none; }
@@ -9470,7 +9473,17 @@ textarea {
     grid-template-columns: 3fr 4fr; }
   .flex.columns-4 > * {
     flex: 1 0 24%;
-    margin: 0.25%; } }
+    margin: 0.25%; }
+  .header-section .row .container .header-info {
+    text-aling: left;
+    order: 1; }
+  .header-section .row .container .header-image {
+    text-aling: left;
+    order: 2; }
+  .pricing-section .row-footer-top .container {
+    text-align: left; }
+    .pricing-section .row-footer-top .container .copyright {
+      grid-column: 1 / 3; } }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -9481,7 +9494,36 @@ textarea {
   .break-point-indicator {
     background: red; }
     .break-point-indicator::after {
-      content: "min:992px"; } }
+      content: "min:992px"; }
+  .navigation-section .row .container {
+    grid-template-columns: 170px auto 170px; }
+    .navigation-section .row .container .menu-cell {
+      display: flex; }
+    .navigation-section .row .container .button-cell {
+      display: flex; }
+  .header-section {
+    min-height: 1000px;
+    margin-top: 150px; }
+  .whatson-section .row-top .container p {
+    padding-left: 45px; }
+  .whatson-section .row-middle .container p {
+    margin: 70px; }
+  .whatson-section .row-middle .container a {
+    margin-left: 70px; }
+  .whatson-section .row-bottom .container p {
+    margin-left: 70px; }
+  .whatson-section .row-bottom .container h2 {
+    margin-left: 30px; }
+  .whatson-section .row-bottom .container a {
+    margin-left: 70px; }
+  .pricing-section .row-pricing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .pricing-section .row-pricing .container .cell {
+      width: initial; }
+  .pricing-section .row-footer-top .container .copyright {
+    grid-column: 1 / 5; } }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -9493,6 +9535,27 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
   .container {
     width: 1140px; } }
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .header-left-right {
+    display: block; }
+  .whatson-section .row-top .row-left-right {
+    display: flex; }
+  .whatson-section .row-bottom .row-left-right {
+    display: flex; }
+  .break-point-indicator {
+    background: dodgerblue; }
+    .break-point-indicator::after {
+      content: "min:1600px"; } }
+
+/* Extra large devices (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1920px) {
+  .header-bg {
+    background-image: url(../img/header-bg.svg);
+    top: 0;
+    background-position: bottom;
+    background-size: cover; } }
 
 .break-point-indicator {
   display: block !important;

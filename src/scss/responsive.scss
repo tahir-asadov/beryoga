@@ -68,6 +68,30 @@
     }
   }
 
+  .header-section {
+    .row {
+      .container {
+        .header-info {
+          text-aling: left;
+          order: 1;
+        }
+        .header-image {
+          text-aling: left;
+          order: 2;
+        } 
+      }
+    }
+  }
+  .pricing-section {
+    .row-footer-top {
+      .container {
+        text-align: left;
+        .copyright {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -87,6 +111,78 @@
       content: "min:992px";
     }
   }
+
+  .navigation-section {
+    .row {
+      .container {
+        grid-template-columns: 170px auto 170px;
+        .menu-cell {
+          display: flex;
+        }
+        .button-cell {
+          display: flex;
+        }
+      }
+    }
+  }
+  .header-section {
+    min-height: 1000px;
+    margin-top: 150px;
+  }
+
+  .whatson-section {
+    .row-top {
+      .container {
+        p {
+          padding-left: 45px;
+        }
+      }
+    }
+    .row-middle {
+      .container {
+        p {
+          margin: 70px;
+        }
+        a {
+          margin-left: 70px;
+        }
+      }
+    }
+    .row-bottom {
+      .container {
+        p {
+          margin-left: 70px;
+        }
+        h2 {
+          margin-left: 30px;
+        }
+        a {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+
+  .pricing-section {
+    .row-pricing {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cell {
+          width: initial;
+        }
+      }
+    }
+    .row-footer-top {
+      .container {
+        .copyright {
+          grid-column: 1 / 5;
+        }
+      }
+    }
+  }
+  
 
 }
 
@@ -110,3 +206,39 @@
   
 }
 
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .header-left-right {
+    display: block;
+  }
+  .whatson-section {
+    .row-top {
+      .row-left-right {
+        display: flex;
+      }
+    }
+    .row-bottom {
+      .row-left-right {
+        display: flex;
+      }
+    }
+  }
+  .break-point-indicator {
+    background: dodgerblue;
+    &::after {
+      content: "min:1600px";
+    }
+  }
+  
+}
+/* Extra large devices (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1920px) {
+  .header-bg {
+    background-image: url(../img/header-bg.svg);
+    top: 0;
+    background-position: bottom;
+    background-size: cover;
+  }
+
+}
