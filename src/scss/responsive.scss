@@ -67,7 +67,6 @@
       margin: 0.25%
     }
   }
-
   .header-section {
     .row {
       .container {
@@ -111,6 +110,10 @@
       content: "min:992px";
     }
   }
+  .mobile-menu, .mobile-menu-button {
+    display: none;
+  }
+
 
   .navigation-section {
     .row {
@@ -241,4 +244,24 @@
     background-size: cover;
   }
 
+}
+
+
+@media only screen and (max-width: 992px) {
+
+  body.menu-open {
+    overflow: hidden;
+    .base-grid {
+      right: -90%;
+      overflow: hidden;
+      box-shadow: -1px 0px 20px -10px black;
+      .grid-overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+      }
+    }
+  }
 }

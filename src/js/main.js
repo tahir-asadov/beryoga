@@ -21,5 +21,9 @@ $(document).ready(function() {
   $( window ).on( 'load', function(){
     window_resize();
   });
+
+  $('.mobile-menu-button').click(function(){
+    $('body').toggleClass('menu-open');
+  });
   
 });
