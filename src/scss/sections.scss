@@ -215,7 +215,20 @@
 [Pricing]
 ========================================================================== */
 .pricing-section {
-  .row {
+  // background-color: #67d5f8;
+  padding-top: 100px;
+  background-image: url( /img/footer-pricing-bg.png );
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  .pricing-shapes-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .row-pricing {
+    margin-top: -90px;
     .container {
       display: flex;
       justify-content: space-between;
@@ -330,15 +343,42 @@
       }
     }
   }
-}
-
-/* ==========================================================================
-[Footer]
-========================================================================== */
-.footer-section {
-  .row {
+  .row-footer-top {
+    margin: 0;
     .container {
-
+      margin-top: 200px;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.5);
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      padding-bottom: 30px;
+      h4 {
+        font-size: 16px;
+        color: #585858;
+      }
+      p {
+        margin: 0;
+        padding-bottom: 30px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          a {
+            color: #585858;
+            text-decoration: none;
+            line-height: 40px;
+          }
+        }
+      }
+      .copyright {
+        grid-column: 1 / 5;
+        p {
+          text-align: center;
+          padding: 30px 0 0 0;
+        }
+      }
     }
   }
 }
