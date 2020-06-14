@@ -22,8 +22,17 @@ $(document).ready(function() {
     window_resize();
   });
 
-  $('.mobile-menu-button').click(function(){
-    $('body').toggleClass('menu-open');
-  });
-  
+  $( '.mobile-menu-button' ).click( function(){
+    $( 'body' ).toggleClass( 'menu-open' );
+    if( $( 'body' ).hasClass( 'menu-open' ) ){
+      $( 'body' ).on( 'scroll touchmove mousewheel DOMMouseScroll', function( e ){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      } )
+    }else {
+      $( 'body' ).unbind( 'scroll touchmove mousewheel DOMMouseScroll' );
+    }
+  } );
+
 });

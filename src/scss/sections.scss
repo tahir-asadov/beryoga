@@ -18,7 +18,6 @@
 .mobile-menu {
   position: absolute;
   top: 0;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
@@ -55,7 +54,7 @@
   }
 }
 .mobile-menu-button {
-  position: fixed;
+  position: absolute;
   top: 40px;
   z-index: 10;
   left: 10px;
