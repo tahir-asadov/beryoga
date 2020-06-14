@@ -11951,17 +11951,48 @@ $(document).ready(function () {
   $(window).on('load', function () {
     window_resize();
   });
+
+  function _onWheel(e) {
+    e.preventDefault();
+  }
+
   $('.mobile-menu-button').click(function () {
     $('body').toggleClass('menu-open');
 
     if ($('body').hasClass('menu-open')) {
-      $('body').on('scroll touchmove mousewheel DOMMouseScroll', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
+      document.addEventListener('DOMMouseScroll', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.addEventListener('mousewheel', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.addEventListener('scroll', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.addEventListener('touchmove', _onWheel, {
+        capture: false,
+        passive: false
       });
     } else {
-      $('body').unbind('scroll touchmove mousewheel DOMMouseScroll');
+      document.removeEventListener('DOMMouseScroll', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.removeEventListener('mousewheel', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.removeEventListener('scroll', _onWheel, {
+        capture: false,
+        passive: false
+      });
+      document.removeEventListener('touchmove', _onWheel, {
+        capture: false,
+        passive: false
+      });
     }
   });
 });
